@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:orientation="vertical"
+  tools:context=".ui.ui.login.LoginActivity">
+
+  <ImageView
+    android:id="@+id/logo"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    app:srcCompat="@mipmap/ic_launcher"
+    android:layout_marginTop="30dp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_gravity="center"
+    />
+
+  <TextView
+    android:id="@+id/connexion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/connection"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:layout_marginTop="10dp"
+    android:layout_gravity="center"
+    android:gravity="center"/>
+
+  <EditText
+    android:id="@+id/email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:hint="@string/prompt_email"
+    android:inputType="textEmailAddress"
+    android:selectAllOnFocus="true" />
+
+  <EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:hint="@string/prompt_password"
+    android:imeActionLabel="@string/action_sign_in_short"
+    android:imeOptions="actionDone"
+    android:inputType="textPassword"
+    android:selectAllOnFocus="true" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckBox
+      android:id="@+id/checkbox"
+      android:layout_width="wrap_content"
+      android:checked="true"
+      android:layout_height="wrap_content"/>
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/acceptConditions"
+      android:textSize="17sp"/>
+  </LinearLayout>
+
+    <Button
+      android:id="@+id/login"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="16dp"
+      android:enabled="false"
+      android:textColor="@color/white"
+      android:text="@string/Validate"
+      android:backgroundTint="@color/green"
+      app:layout_constraintVertical_bias="0.2" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.3" />
+
+
+
+
+
+</LinearLayout>
